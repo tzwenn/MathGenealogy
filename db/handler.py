@@ -5,6 +5,11 @@
 import os
 import sqlite3
 
+import sys
+
+def errPrint(s):
+	sys.stderr.write(str(s))
+
 class dbHandler(object):
     """ Basic Database access and creating of table structure """ 
     
@@ -37,6 +42,7 @@ class dbHandler(object):
             self.cur.execute(*args)
             return True
         except (StandardError), e:
+            errPrint(e)
             return False
     
     def executescript(self, *args):
@@ -44,6 +50,7 @@ class dbHandler(object):
             self.cur.executescript(*args)
             return True
         except (StandardError), e:
+            errPrint(e)
             return False
     
     def iterdump(self):
@@ -55,6 +62,7 @@ class dbHandler(object):
             res = self.cur.fetchall()
             return res 
         except (StandardError), e:
+            errPrint(e)
             return []
     
     def exec_fetchone(self, *args):
@@ -62,6 +70,7 @@ class dbHandler(object):
             self.cur.execute(*args)
             return self.cur.fetchone() 
         except (StandardError), e:
+            errPrint(e)
             return None
     
     def fetchone(self):
