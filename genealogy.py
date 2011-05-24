@@ -1,13 +1,13 @@
 #!/usr/bin/env python
+# -*- coding: UTF-8 -*-
 
 import urllib2
-from db import dbHandler
+from db import dbase 
 
 def depths(idx):
 	pass
 
 if __name__ == "__main__":
-	handler = dbHandler()
-	handler.startDatabase()
+	dbase.startDatabase()
 
-	handler.stopDatabase()
+	dbase.stopDatabase()
