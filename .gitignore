@@ -1,3 +1,4 @@
 *.pyc
 *.swp
 src/run/test.py
+genealogy.db
