@@ -47,4 +47,6 @@ class dbBaseGen(dbHandler):
 		return self.fetchall("""SELECT studentsID FROM degree
 			WHERE advisorID=:1""", (advisorID, ))
 
+	def phdExists(self, idx):
+		return self.readPhD(idx) is not None
 

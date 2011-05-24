@@ -10,5 +10,5 @@ def depths(idx):
 if __name__ == "__main__":
 	dbase.startDatabase()
 	print dbase.writePhD(131343, u"Ferdinand Börner")
-	print dbase.readPhD(131343)
+	print dbase.phdExists(131343)
 	dbase.stopDatabase()
