@@ -28,7 +28,7 @@ $ xsltproc notugly.xsl /tmp/euler.svg > euler.svg
 
 which produces:
 
-![Euler's academical ancestry](euler.svg)
+![Euler's academical ancestry](https://raw.github.com/tzwenn/MathGenealogy/master/euler.svg)
 
 ##Issues##
 
