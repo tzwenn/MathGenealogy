@@ -1,14 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-import urllib2
 from db import dbase 
+from readData import readData
 
 def depths(idx):
 	pass
 
 if __name__ == "__main__":
-	dbase.startDatabase()
+	#print readData(131339)
+	#print 
+	readData(128986)
+	readData(131343)
+	"""dbase.startDatabase()
 	print dbase.writePhD(131343, u"Ferdinand Börner")
 	print dbase.phdExists(131343)
-	dbase.stopDatabase()
+	dbase.stopDatabase()"""
