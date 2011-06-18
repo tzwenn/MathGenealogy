@@ -33,6 +33,12 @@ class dbBaseGen(dbHandler):
 	def readThesis(self, idx):
 		return self.exec_fetchone("SELECT * FROM thesis WHERE id=:1", (idx,))
 
+	def readFirstPhDThesis(self, idx):
+		""" Returns first thesis of the PhD given by idx """
+		return self.exec_fetchone("""SELECT * FROM thesis WHERE id IN 
+			(SELECT thesisID FROM degree WHERE studentID=?)
+			ORDER BY year LIMIT 1""",(idx,))
+
 	def getAdvisors(self, studentID):
 		""" Returns advisors of a student
 		    This is a multiset, not a normal set!
@@ -44,7 +50,7 @@ class dbBaseGen(dbHandler):
 		""" Returns students of an advisor
 		    This is a multiset, not a normal set!
 		"""
-		return map(lambda tpl: tpl[0], self.fetchall("""SELECT studentsID FROM degree
+		return map(lambda tpl: tpl[0], self.fetchall("""SELECT studentID FROM degree
 			WHERE advisorID=:1""", (advisorID, )))
 
 	def phdExists(self, idx):
