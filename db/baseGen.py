@@ -11,10 +11,10 @@ class dbBaseGen(dbHandler):
 		self.con.commit() # Nötig?
 		return idx
 
-	def writeThesis(self, year, title, school):
-		if not self.execute("""INSERT INTO theses
-			(year, title, school) VALUES (?, ?, ?)""",
-			(year, title, school)):
+	def writeThesis(self, degree, year, title, school):
+		if not self.execute("""INSERT INTO thesis
+			(degree, year, title, school) VALUES (?, ?, ?, ?)""",
+			(degree, year, title, school)):
 			return None
 		self.con.commit()
 		return self.cur.lastrowid
