@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-# Copyright (C) 2010 Sven Köhler  <tzwenn@users.berlios.de>
+# Copyright (C) 2010, 2011 Sven Köhler 
 
 import os
 import sqlite3
