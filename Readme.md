@@ -24,11 +24,12 @@ You can pretty up your output using the XSL transform by [Vidar Hokstad](https:/
 ```bash
 $ dot euler.dot -Grankdir=BT -Tsvg -o /tmp/euler.svg
 $ xsltproc notugly.xsl /tmp/euler.svg > euler.svg
+$ inkscape -e euler.png euler.svg
 ```
 
 which produces:
 
-![Euler's academical ancestry](https://raw.github.com/tzwenn/MathGenealogy/master/euler.svg)
+![Euler's academical ancestry](https://raw.github.com/tzwenn/MathGenealogy/master/euler.png)
 
 ##Issues##
 
