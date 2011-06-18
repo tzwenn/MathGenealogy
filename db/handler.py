@@ -92,7 +92,8 @@ class dbHandler(object):
 
             CREATE TABLE thesis (
               id INTEGER PRIMARY KEY,
-              year INTEGER,
+	      degree TEXT,
+              year TEXT,
               title TEXT,
               school TEXT
             );

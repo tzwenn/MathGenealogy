@@ -12,7 +12,8 @@ if __name__ == "__main__":
 	#print 
 	readData(128986)
 	readData(131343)
-	"""dbase.startDatabase()
+	"""
+	dbase.startDatabase()
 	print dbase.writePhD(131343, u"Ferdinand Börner")
 	print dbase.phdExists(131343)
 	dbase.stopDatabase()"""
