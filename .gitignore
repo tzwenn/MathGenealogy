@@ -1,5 +1,6 @@
 *.pyc
 *.swp
-src/run/test.py
 genealogy.db
-out.png
+*.pdf
+*.png
+*.dot
