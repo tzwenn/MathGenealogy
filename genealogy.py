@@ -3,6 +3,7 @@
 
 from db import dbase 
 from search import depthSearch
+from display import graphVIZ
 from optparse import OptionParser
 
 def optsearch(option, opt, value, parser):
@@ -12,7 +13,7 @@ def optsearch(option, opt, value, parser):
 
 def optdisplay(option, opt, value, parser):
 	dbase.startDatabase()
-	print "display mal"
+	print graphVIZ(value)
 	dbase.stopDatabase()
 
 if __name__ == "__main__":

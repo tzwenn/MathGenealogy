@@ -37,15 +37,15 @@ class dbBaseGen(dbHandler):
 		""" Returns advisors of a student
 		    This is a multiset, not a normal set!
 		"""
-		return self.fetchall("""SELECT advisorID FROM degree
-			WHERE studentID=:1""", (studentID, ))
+		return map(lambda tpl: tpl[0], self.fetchall("""SELECT advisorID FROM degree
+			WHERE studentID=:1""", (studentID, )))
 
 	def getStudents(self, advisorID):
 		""" Returns students of an advisor
 		    This is a multiset, not a normal set!
 		"""
-		return self.fetchall("""SELECT studentsID FROM degree
-			WHERE advisorID=:1""", (advisorID, ))
+		return map(lambda tpl: tpl[0], self.fetchall("""SELECT studentsID FROM degree
+			WHERE advisorID=:1""", (advisorID, )))
 
 	def phdExists(self, idx):
 		return self.readPhD(idx) is not None
