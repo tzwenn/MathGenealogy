@@ -11,7 +11,7 @@ It's not very straightforward yet, but if you like to use this programm visit th
 ```bash
 $ ./genealogy --search 38586
 $ ./genealogy --display 38586 > euler.dot
-``
+```
 
 The next step would be using one of the GraphVIZ-tools like `dot`, `neato` or `fdp`.
 
