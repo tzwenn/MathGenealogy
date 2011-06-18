@@ -6,7 +6,7 @@ Since they don't provide a database dump this small tool crawls the (as statical
 
 ##Usage##
 
-It's not very straightforward yet, but if you like to use this programm visit the Mathematics Genealogy Project's [website](http://genealogy.math.ndsu.nodak.edu/) and search for the desired mathematician. Copy his or her id from the URL (e.g. Leonhard Euler) would be identified by `id.php?id=38586`. Let the program first download his ancestry, then generate a `.dot` file.
+It's not very straightforward yet, but if you like to use this programm visit the Mathematics Genealogy Project's [website](http://genealogy.math.ndsu.nodak.edu/) and search for the desired mathematician. Copy his or her id from the URL (e.g. Leonhard Euler would be represented by `id.php?id=38586`). Let the program first download his ancestry, then generate a DOT language file.
 
 ```bash
 $ ./genealogy.py --search 38586
