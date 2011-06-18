@@ -37,4 +37,4 @@ And yes, the output looks awful.
 
 To the Mathematics Genealogy Project for their work, I hope very much to recieve a database dump someday. Given the already big number of request I hope this program doesn't overstrain their server load, otherwise automatic request distribution among the mirrors should be seriously considered from this site.
 
-Jorge Cham for his comics, especially that one featuring [acedemic genealogy](http://www.phdcomics.com/comics.php?f=1419)
+Jorge Cham for his comics, especially that one featuring [acedemic genealogy](http://www.phdcomics.com/comics.php?f=1419).
