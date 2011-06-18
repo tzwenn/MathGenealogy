@@ -14,6 +14,15 @@ html_escaped = {
 	"&ouml;": u'ö',
 	"&uuml;": u'ü',
 	"&szlig;": u'ß',
+	"&agrave;": u'à',
+	"&egrave;": u'è',
+	"&ograve;": u'ò',
+	"&ugrave;": u'ù',
+	"&aacute;": u'á',
+	"&eacute;": u'é',
+	"&oacute;": u'ó',
+	"&uacute;": u'ú',
+	"&#324;": u'ń',
 }
 
 

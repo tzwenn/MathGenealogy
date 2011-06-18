@@ -26,7 +26,8 @@ def depths(idx, depth=1000):
 if __name__ == "__main__":
 	if len(sys.argv) > 1:
 		dbase.startDatabase()
-		depths(int(sys.argv[1]))
+		for idx in map(int, sys.argv[1:]):
+			depths(idx)
 		dbase.stopDatabase()
 	else:
 		print "Gib mir mal eine StartID"
