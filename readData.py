@@ -66,9 +66,13 @@ def readThesis(idx, text):
 	return (degree, year, title, school)
 
 def readDegree(idx, text):
-	text = re.search('<p style="text-align: center; line-height: 2.75ex">(.*?)</p>', text).group(1)
+	mo = re.search('<p style="text-align: center; line-height: 2.75ex">(.*?)</p>', text)
+	if mo is None:
+		return []
+	text = mo.group(1)
 	return [(idx, int(aID)) for aID in re.findall(r'<a.*?id=(.*?)">', text)]
 
 def readData(idx):
 	text = fetchPage(idx)
 	return readPhD(idx, text), readThesis(idx, text), readDegree(idx, text)
+
