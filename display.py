@@ -36,12 +36,3 @@ def graphVIZ(idx):
 	visitedPhDs = set([])
 	return ("digraph Genealogy {\n%s\n}" % visPhD(idx)).encode("utf-8")
 
-if __name__ == "__main__":
-	dbase.startDatabase()
-	print "digraph Genealogy {"
-	print visPhD(131343).encode("utf-8")
-	print visPhD(29774).encode("utf-8")
-	print visPhD(153847).encode("utf-8")
-	print "}"
-	dbase.startDatabase()
-
