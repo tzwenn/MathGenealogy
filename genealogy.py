@@ -9,9 +9,7 @@ def depths(idx):
 
 if __name__ == "__main__":
 	#print readData(131339)
-	#print 
-	readData(128986)
-	readData(131343)
+	print readData(131343)
 	"""
 	dbase.startDatabase()
 	print dbase.writePhD(131343, u"Ferdinand Börner")
