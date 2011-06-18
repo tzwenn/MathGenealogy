@@ -9,8 +9,8 @@ Since they don't provide a database dump this small tool crawls the (as statical
 It's not very straightforward yet, but if you like to use this programm visit the Mathematics Genealogy Project's [website](http://genealogy.math.ndsu.nodak.edu/) and search for the desired mathematician. Copy his or her id from the URL (e.g. Leonhard Euler) would be identified by `id.php?id=38586`. Let the program first download his ancestry, then generate a `.dot` file.
 
 ```bash
-$ ./genealogy --search 38586
-$ ./genealogy --display 38586 > euler.dot
+$ ./genealogy.py --search 38586
+$ ./genealogy.py --display 38586 > euler.dot
 ```
 
 The next step would be using one of the GraphVIZ-tools like `dot`, `neato` or `fdp`.
@@ -22,9 +22,13 @@ $ dot euler.dot -Grankdir=BT -Tpng -o euler.png
 You can pretty up your output using the XSL transform by [Vidar Hokstad](https://github.com/vidarh/diagram-tools):
 
 ```bash
-$ dot euler.dot -Grankdir=BT -Tpng -o /tmp/euler.svg
+$ dot euler.dot -Grankdir=BT -Tsvg -o /tmp/euler.svg
 $ xsltproc notugly.xsl /tmp/euler.svg > euler.svg
 ```
+
+which produces:
+
+![Euler's academical ancestry](euler.svg)
 
 ##Issues##
 
