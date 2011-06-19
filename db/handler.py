@@ -8,7 +8,7 @@ import sqlite3
 import sys
 
 def errPrint(s):
-	sys.stderr.write(str(s))
+	sys.stderr.write("[Database] %s" % str(s))
 
 class dbHandler(object):
     """ Basic Database access and creating of table structure """ 
