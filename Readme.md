@@ -16,14 +16,13 @@ $ ./genealogy.py --display 38586 > euler.dot
 The next step would be using one of the GraphVIZ-tools like `dot`, `neato` or `fdp`.
 
 ```bash
-$ dot euler.dot -Grankdir=BT -Tpng -o euler.png
+$ dot euler.dot -Tpng -Grankdir=BT -o euler.png
 ```
 
 You can pretty up your output using the XSL transform by [Vidar Hokstad](https://github.com/vidarh/diagram-tools):
 
 ```bash
-$ dot euler.dot -Grankdir=BT -Tsvg -o /tmp/euler.svg
-$ xsltproc notugly.xsl /tmp/euler.svg > euler.svg
+$ dot euler.dot -Tsvg -Grankdir=BT -Nstyle=filled | xsltproc notugly.xsl - > euler.svg
 $ inkscape -e euler.png euler.svg
 ```
 
