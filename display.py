@@ -34,5 +34,8 @@ def visPhD(idx, depth=1000):
 
 def graphVIZ(idx):
 	visitedPhDs = set([])
-	return ("digraph Genealogy {\n%s\n}" % visPhD(idx)).encode("utf-8")
+	return ("digraph Genealogy {\n"
+		"  rankdir = BT\n"
+		"  %s\n"
+		"}" % visPhD(idx)).encode("utf-8")
 
