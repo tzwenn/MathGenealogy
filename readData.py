@@ -36,6 +36,8 @@ html_escaped = {
 	"&#324;": u'ń',
 }
 
+degree_str = '<span style="margin-right: 0.5em">'
+advisor_str = '<p style="text-align: center; line-height: 2.75ex">'
 
 def unescape(s):
 	for old, new in html_escaped.iteritems():
@@ -58,7 +60,7 @@ def readPhD(idx, text):
 	return (idx, re.search("<h2.*?>(.*?)</h2>", text).group(1).strip())
 
 def readThesis(idx, text):
-	text = text.partition("<span style=\"margin-right: 0.5em\">")[2]
+	text = text.partition(degree_str)[2]
 	degree, text = tagpart(text, "<span style=\"color: #006633; margin-left: 0.5em\">")
 	school, text = tagpart(text, "</span>")
 	year, text = tagpart(text, "</span>")
@@ -66,13 +68,20 @@ def readThesis(idx, text):
 	return (degree, year, title, school)
 
 def readDegree(idx, text):
-	mo = re.search('<p style="text-align: center; line-height: 2.75ex">(.*?)</p>', text)
+	mo = re.search('%s(.*?)</p>' % advisor_str, text)
 	if mo is None:
 		return []
 	text = mo.group(1)
 	return [(idx, int(aID)) for aID in re.findall(r'<a.*?id=(.*?)">', text)]
 
+def readDegreeTuples(idx, text):
+	res = []
+	while degree_str in text:
+		res.append((readThesis(idx, text), readDegree(idx, text)))
+		text = text.partition(advisor_str)[2]
+	return res
+
 def readData(idx):
 	text = fetchPage(idx)
-	return readPhD(idx, text), readThesis(idx, text), readDegree(idx, text)
+	return readPhD(idx, text), readDegreeTuples(idx, text)
 
