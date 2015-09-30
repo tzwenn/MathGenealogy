@@ -2,7 +2,7 @@ Are you studying math and always wanted to know your academical "heritage?"
 
 The [Mathematics Genealogy Project](http://genealogy.math.ndsu.nodak.edu/) started a database providing currently (June 2011) about 150000 records of mathematicians, their degrees and advisors of their theses.
 
-Since they don't provide a database dump this small tool crawls the (as statical assumed) website and offers you the possibility of visualizing the acedemic family tree of your lecturer or advisor using [GraphVIZ](http://www.graphviz.org/).
+Since they don't provide a database dump this small tool crawls the (as statical assumed) website and offers you the possibility of visualizing the academic family tree of your lecturer or advisor using [GraphVIZ](http://www.graphviz.org/).
 
 ##Usage##
 
@@ -41,4 +41,4 @@ And yes, the output looks awful.
 
 To the Mathematics Genealogy Project for their work, I hope very much to recieve a database dump someday. Given the already big number of request I hope this program doesn't overstrain their server load, otherwise automatic request distribution among the mirrors should be seriously considered from this site.
 
-Jorge Cham for his comics, especially that one featuring [acedemic genealogy](http://www.phdcomics.com/comics.php?f=1419).
+Jorge Cham for his comics, especially that one featuring [academic genealogy](http://www.phdcomics.com/comics.php?f=1419).
